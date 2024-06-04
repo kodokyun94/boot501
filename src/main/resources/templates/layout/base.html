@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+                xmlns:th="www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+    <body>
+        <div>
+            <h1>
+        아래의 블록 2개의 영역이 동적으로 계속 교체 됨
+        블록1: 본문의 블록- 임시 헤더
+            </h1>
+        </div>
+        <div layout:fragment="content">
+            <p>블록 1, content 영역</p>
+        </div>
+        <div>
+            <h1>
+        블록2: 자바스크립트의 블록 - 임시 본문
+            </h1>
+        </div>
+        <th:block layout:fragment="javascript">
+        </th:block>
+
+        <div>
+            <h1>임시 푸터 영역</h1>
+        </div>
+    </body>
+</html>

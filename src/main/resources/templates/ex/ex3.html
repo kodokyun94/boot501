@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:th="www.thymeleaf.org"
+      layout:decorate="~{layout/base.html}"
+>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Title</title>
+
+</head>
+<body>
+<div layout:fragment="content">
+    <h1>ex3에서 base.html의 conetent 영역에 이용된다.</h1>
+</div>
+
+
+
+<script th:inline="javascript" layout:fragment="javascript">
+    const list = [[${list}]]
+    console.log(list)
+</script>
+
+
+</body>
+</html>

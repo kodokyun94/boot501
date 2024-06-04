@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Title</title>
+
+</head>
+<body>
+<h1>서버에서 모델에 담아 전달 된 데이터 사용</h1>
+<div th:text="${list}"></div>
+<div th:text="${list2}"></div>
+<div th:text="${map}"></div>
+<div th:text="${dto}"></div>
+
+<h1>타임리프를 자바스크립트 문법으로 사용</h1>
+<script th:inline="javascript">
+    const list = [[${list}]]
+    const list2 = [[${list2}]]
+    const map = [[${map}]]
+    const dto = [[${dto}]]
+
+    console.log(list)
+    console.log(list2)
+    console.log(map)
+    console.log(dto)
+</script>
+</body>
+</html>
